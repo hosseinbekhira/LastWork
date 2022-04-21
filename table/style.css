@@ -1,0 +1,121 @@
+:root {
+  --red--color: #f44336;
+  --blue--color: #2196f3;
+  --green--color: #009688;
+  --purple--color: #e91e63;
+  --grey--color: #7e7e7e;
+  --white--color: #ffffff;
+  --bg--color: #f6f6f6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+  min-height: 2000px;
+}
+/* Start Global Styles */
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.clear {
+  clear: both;
+}
+/* Backgrounds Color  */
+.red-bg {
+  background-color: var(--red--color);
+}
+.blue-bg {
+  background-color: var(--blue--color);
+}
+/* Color  */
+.color-purple {
+  color: var(--purple--color) !important;
+}
+.color-grey {
+  color: var(--grey--color) !important;
+}
+
+/* End Global Styles */
+.cont-cards {
+  margin-top: 100px;
+  background-color: var(--bg--color);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Start Row */
+.cont-cards .row {
+  margin-bottom: 20px;
+}
+.cont-cards .row .discount {
+  display: block;
+  background-color: var(--blue--color);
+  color: var(--white--color);
+  font-weight: bold;
+  font-size: 1.2rem;
+  height: 40px;
+  line-height: 40px;
+  width: 150px;
+  margin-left: auto;
+  position: relative;
+  padding-left: 15px;
+}
+.cont-cards .row .discount::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: transparent var(--bg--color) transparent transparent;
+  border-width: 20px;
+}
+
+/* Start Column */
+.cont-cards .column {
+  float: left;
+  width: calc(50% - 15px);
+  background-color: var(--white--color);
+  border-radius: 12px 12px 0px 0px;
+}
+.cont-cards .left {
+  margin-right: 30px;
+}
+.cont-cards .right {
+}
+
+.cont-cards .column .title {
+  padding: 15px 0px;
+  color: var(--white--color);
+  font-size: 1.3rem;
+  padding-left: 25px;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.cont-cards .column .list-elements {
+  list-style: none;
+  margin: 0px;
+}
+.cont-cards .column .list-elements .element {
+  font-size: 1.1rem;
+  padding: 18px 0px 18px 25px;
+}
+.cont-cards .column .list-elements .element:not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+}
+.cont-cards .column .list-elements .element i {
+  font-size: 1.3rem;
+  padding-right: 5px;
+  color: var(--green--color);
+}
+.cont-cards .column .list-elements .element .my-icon {
+  margin-left: 200px;
+}

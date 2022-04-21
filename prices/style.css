@@ -1,0 +1,115 @@
+:root {
+  --p--color: #242424;
+  --s--color: #2e2e2e;
+  --th--color: #858080;
+  --blue--color: #03a9f4;
+  --white--color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+  min-height: 2000px;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.clear {
+  clear: both;
+}
+
+.cont-cards {
+  margin-top: 100px;
+}
+.cont-cards .card {
+  width: calc(100% / 4);
+  float: left;
+  background-color: var(--p--color);
+  transition: all 100ms ease;
+}
+.cont-cards .card:hover {
+  background-color: var(--blue--color);
+  transform: scale(1.1);
+}
+.cont-cards .card:not(:last-of-type) {
+  border-right: 1px solid var(--th--color);
+}
+.cont-cards .card .title {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  font-size: 1.2rem;
+}
+.cont-cards .card .title h2 {
+  color: var(--white--color);
+}
+.cont-cards .card .title h2:first-of-type {
+  margin-bottom: 24px;
+}
+.cont-cards .card .title h2 .mo {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+.cont-cards .card .bandwidth,
+.cont-cards .card .memory,
+.cont-cards .card .support,
+.cont-cards .card .domain,
+.cont-cards .card .cont-btn {
+  color: var(--th--color);
+  font-size: 1.1rem;
+  text-align: center;
+  border-top: 1px solid var(--th--color);
+  padding: 20px 0px;
+}
+.cont-cards .card:hover .bandwidth,
+.cont-cards .card:hover .memory,
+.cont-cards .card:hover .support,
+.cont-cards .card:hover .domain,
+.cont-cards .card:hover .cont-btn {
+  color: var(--white--color);
+  border-top-color: var(--white--color);
+}
+/* ======================================  */
+.cont-cards .card .memory,
+.cont-cards .card .domain {
+  background-color: var(--s--color);
+}
+.cont-cards .card:hover .memory,
+.cont-cards .card:hover .domain {
+  background-color: var(--blue--color);
+}
+
+.cont-cards .card .cont-btn {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.cont-cards .card .cont-btn .btn {
+  display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background-color: transparent;
+  color: var(--white--color);
+  border: none;
+  cursor: pointer;
+  font-family: Tahoma, sans-serif;
+  font-size: 1.1rem;
+  border: 1px solid var(--th--color);
+  transition: all 0.3s ease;
+}
+.cont-cards .card:hover .cont-btn .btn {
+  border-color: var(--white--color);
+}
+.cont-cards .card .cont-btn .btn:hover {
+  background-color: var(--white--color);
+  color: var(--p--color);
+}
